@@ -1,6 +1,6 @@
 [package]
 name = "bulletproof"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Jeehoon Kang <jeehoon.kang@sf.snu.ac.kr>"]
 license = "MIT/Apache-2.0"
 readme = "README.md"
@@ -8,8 +8,8 @@ repository = "https://github.com/jeehoonkang/bulletproof-rs"
 homepage = "https://github.com/jeehoonkang/bulletproof-rs"
 documentation = "https://docs.rs/bulletproof"
 description = "Bulletproof load from memory"
-keywords = ["sigsegv"]
-categories = ["unix", "signal", "memory-management"]
+keywords = ["unix", "signal", "sigsegv"]
+categories = ["memory-management"]
 
 [dependencies]
 libc = "0.2"

@@ -38,7 +38,7 @@ fn main() {
 ## How?
 
 Internally, `Loader::new()` installs a signal handler for segmentation fault (`SIGSEGV`), which
-recovers from the fault using `longjmp()`.
+recovers from the fault using `siglongjmp()`.
 
 
 ## Why?
@@ -46,8 +46,9 @@ recovers from the fault using `longjmp()`.
 You PROBABLY should not use this library: instead of relying on bulletproof load, remove your
 segmentation faults! However, if you want to build low-level systems such as virtual machine or
 garbage collectors, bulletproof load can be a versatile tool for an additional bit of
-efficiency. For example, see the `ThreadCrashProtection` class in Java HotSpot virtual machine:
-http://hg.openjdk.java.net/jdk10/jdk10/hotspot/file/tip/src/os/posix/vm/os_posix.hpp#l115
+efficiency. For example, see the [`ThreadCrashProtection`
+class](http://hg.openjdk.java.net/jdk10/jdk10/hotspot/file/tip/src/os/posix/vm/os_posix.hpp#l115) in
+Java HotSpot virtual machine.
 
 
 ## License
